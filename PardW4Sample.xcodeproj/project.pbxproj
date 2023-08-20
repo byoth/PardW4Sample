@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		3A4AAAD92A91CA680012A912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAAD82A91CA680012A912 /* AppDelegate.swift */; };
 		3A4AAADB2A91CA680012A912 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAADA2A91CA680012A912 /* SceneDelegate.swift */; };
-		3A4AAADD2A91CA680012A912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAADC2A91CA680012A912 /* ViewController.swift */; };
 		3A4AAAE02A91CA680012A912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AAADE2A91CA680012A912 /* Main.storyboard */; };
 		3A4AAAE22A91CA690012A912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AAAE12A91CA690012A912 /* Assets.xcassets */; };
 		3A4AAAE52A91CA690012A912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AAAE32A91CA690012A912 /* LaunchScreen.storyboard */; };
 		3A4AAAF02A91CA6A0012A912 /* PardW4SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAAEF2A91CA6A0012A912 /* PardW4SampleTests.swift */; };
 		3A4AAAFA2A91CA6A0012A912 /* PardW4SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAAF92A91CA6A0012A912 /* PardW4SampleUITests.swift */; };
 		3A4AAAFC2A91CA6A0012A912 /* PardW4SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAAFB2A91CA6A0012A912 /* PardW4SampleUITestsLaunchTests.swift */; };
+		3A4AAB0C2A91CCF20012A912 /* MemoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB0B2A91CCF20012A912 /* MemoFormViewController.swift */; };
+		3A4AAB0E2A91CD030012A912 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB0D2A91CD030012A912 /* MemoModel.swift */; };
+		3A4AAB102A91D4A50012A912 /* StyledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB0F2A91D4A50012A912 /* StyledButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		3A4AAAD52A91CA680012A912 /* PardW4Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PardW4Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4AAAD82A91CA680012A912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A4AAADA2A91CA680012A912 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A4AAADC2A91CA680012A912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A4AAADF2A91CA680012A912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A4AAAE12A91CA690012A912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4AAAE42A91CA690012A912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		3A4AAAF52A91CA6A0012A912 /* PardW4SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PardW4SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4AAAF92A91CA6A0012A912 /* PardW4SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PardW4SampleUITests.swift; sourceTree = "<group>"; };
 		3A4AAAFB2A91CA6A0012A912 /* PardW4SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PardW4SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A4AAB0B2A91CCF20012A912 /* MemoFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormViewController.swift; sourceTree = "<group>"; };
+		3A4AAB0D2A91CD030012A912 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		3A4AAB0F2A91D4A50012A912 /* StyledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		3A4AAAD72A91CA680012A912 /* PardW4Sample */ = {
 			isa = PBXGroup;
 			children = (
+				3A4AAB082A91CC220012A912 /* Models */,
+				3A4AAB092A91CC260012A912 /* Views */,
+				3A4AAB0A2A91CC2A0012A912 /* Controllers */,
 				3A4AAAD82A91CA680012A912 /* AppDelegate.swift */,
 				3A4AAADA2A91CA680012A912 /* SceneDelegate.swift */,
-				3A4AAADC2A91CA680012A912 /* ViewController.swift */,
 				3A4AAADE2A91CA680012A912 /* Main.storyboard */,
 				3A4AAAE12A91CA690012A912 /* Assets.xcassets */,
 				3A4AAAE32A91CA690012A912 /* LaunchScreen.storyboard */,
@@ -125,6 +131,30 @@
 				3A4AAAFB2A91CA6A0012A912 /* PardW4SampleUITestsLaunchTests.swift */,
 			);
 			path = PardW4SampleUITests;
+			sourceTree = "<group>";
+		};
+		3A4AAB082A91CC220012A912 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AAB0D2A91CD030012A912 /* MemoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A4AAB092A91CC260012A912 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AAB0F2A91D4A50012A912 /* StyledButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A4AAB0A2A91CC2A0012A912 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AAB0B2A91CCF20012A912 /* MemoFormViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4AAADD2A91CA680012A912 /* ViewController.swift in Sources */,
 				3A4AAAD92A91CA680012A912 /* AppDelegate.swift in Sources */,
+				3A4AAB102A91D4A50012A912 /* StyledButton.swift in Sources */,
+				3A4AAB0E2A91CD030012A912 /* MemoModel.swift in Sources */,
 				3A4AAADB2A91CA680012A912 /* SceneDelegate.swift in Sources */,
+				3A4AAB0C2A91CCF20012A912 /* MemoFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
