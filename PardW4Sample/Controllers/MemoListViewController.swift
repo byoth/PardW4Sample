@@ -66,6 +66,10 @@ extension MemoListViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension MemoListViewController: MemoFormViewControllerDelegate {
     func memoFormDidSubmit(_ memo: MemoModel) {
-        memos.append(memo)
+        if let existingIndex = memos.firstIndex(where: { $0.uuid == memo.uuid }) {
+            memos[existingIndex] = memo
+        } else {
+            memos.append(memo)
+        }
     }
 }

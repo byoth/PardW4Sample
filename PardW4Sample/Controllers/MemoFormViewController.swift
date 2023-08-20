@@ -36,6 +36,7 @@ class MemoFormViewController: UIViewController {
     
     private func buildMemoModelFromViews() -> MemoModel {
         MemoModel(
+            uuid: memo?.uuid ?? UUID(),
             title: titleTextField.text ?? "",
             content: contentTextView.text
         )
