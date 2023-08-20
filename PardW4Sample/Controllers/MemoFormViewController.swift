@@ -7,6 +7,8 @@ class MemoFormViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
+    var memo: MemoModel?
+    
     @IBAction func tapSubmitButton(_ sender: Any) {
         let memo = buildMemoModelFromViews()
         print(memo)
@@ -15,6 +17,15 @@ class MemoFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.setTitle("Submit", for: .normal)
+        applyMemoModel()
+    }
+    
+    private func applyMemoModel() {
+        guard let memo = memo else {
+            return
+        }
+        titleTextField.text = memo.title
+        contentTextView.text = memo.content
     }
     
     private func buildMemoModelFromViews() -> MemoModel {

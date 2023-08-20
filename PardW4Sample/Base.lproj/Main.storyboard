@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aKa-M0-ChC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -8,19 +8,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Memo Form View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Memo List View Controller-->
+        <scene sceneID="mud-vb-NbF">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemoFormViewController" customModule="PardW4Sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MemoList" id="aKa-M0-ChC" customClass="MemoListViewController" customModule="PardW4Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UjE-j8-KPf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZD-li-2ff" customClass="StyledButton" customModule="PardW4Sample" customModuleProvider="target">
+                                <rect key="frame" x="310" y="67" width="75" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="mSg-XI-TMO"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V8n-8P-fqV">
+                                <rect key="frame" x="0.0" y="117.33333333333331" width="393" height="700.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T3X-Gj-120"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V8n-8P-fqV" firstAttribute="leading" secondItem="T3X-Gj-120" secondAttribute="leading" id="2UX-Pj-tUf"/>
+                            <constraint firstItem="T3X-Gj-120" firstAttribute="bottom" secondItem="V8n-8P-fqV" secondAttribute="bottom" id="2pk-1f-7R6"/>
+                            <constraint firstItem="V8n-8P-fqV" firstAttribute="top" secondItem="eZD-li-2ff" secondAttribute="bottom" constant="16" id="H2Q-dD-74p"/>
+                            <constraint firstItem="eZD-li-2ff" firstAttribute="top" secondItem="T3X-Gj-120" secondAttribute="top" constant="8" id="SFz-Zu-Hqa"/>
+                            <constraint firstItem="T3X-Gj-120" firstAttribute="trailing" secondItem="eZD-li-2ff" secondAttribute="trailing" constant="8" id="icF-UM-MAv"/>
+                            <constraint firstItem="T3X-Gj-120" firstAttribute="trailing" secondItem="V8n-8P-fqV" secondAttribute="trailing" id="qzH-fE-DPa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="eZD-li-2ff" id="jxA-GK-OY7"/>
+                        <outlet property="memoTableView" destination="V8n-8P-fqV" id="GWl-8d-U5n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBI-2D-74x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-785.49618320610682" y="48.591549295774648"/>
+        </scene>
+        <!--Memo Form View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MemoForm" id="BYZ-38-t0r" customClass="MemoFormViewController" customModule="PardW4Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="llc-hz-wxJ">
-                                <rect key="frame" x="16" y="75" width="361" height="727"/>
+                                <rect key="frame" x="16" y="16" width="361" height="810"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ0-vh-qsF" customClass="StyledButton" customModule="PardW4Sample" customModuleProvider="target">
-                                        <rect key="frame" x="286" y="0.0" width="75" height="540.66666666666663"/>
+                                        <rect key="frame" x="286" y="0.0" width="75" height="623.66666666666663"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
@@ -28,12 +69,12 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmU-H0-2D4">
-                                        <rect key="frame" x="0.0" y="548.66666666666663" width="361" height="42.333333333333371"/>
+                                        <rect key="frame" x="0.0" y="631.66666666666663" width="361" height="42.333333333333371"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuH-2t-leD">
-                                        <rect key="frame" x="0.0" y="599" width="361" height="128"/>
+                                        <rect key="frame" x="0.0" y="682" width="361" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -63,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40" y="-2"/>
+            <point key="canvasLocation" x="-74" y="49"/>
         </scene>
     </scenes>
     <resources>
