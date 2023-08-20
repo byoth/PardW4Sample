@@ -21,6 +21,7 @@
 		3A4AAB142A91DB6B0012A912 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB132A91DB6B0012A912 /* MemoListViewController.swift */; };
 		3A4AAB172A91DDE20012A912 /* TitleContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB152A91DDE20012A912 /* TitleContentTableViewCell.swift */; };
 		3A4AAB182A91DDE20012A912 /* TitleContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A4AAB162A91DDE20012A912 /* TitleContentTableViewCell.xib */; };
+		3A4AAB1B2A91E59F0012A912 /* MemoFormViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4AAB1A2A91E59F0012A912 /* MemoFormViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3A4AAB132A91DB6B0012A912 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
 		3A4AAB152A91DDE20012A912 /* TitleContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleContentTableViewCell.swift; sourceTree = "<group>"; };
 		3A4AAB162A91DDE20012A912 /* TitleContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleContentTableViewCell.xib; sourceTree = "<group>"; };
+		3A4AAB1A2A91E59F0012A912 /* MemoFormViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3A4AAB082A91CC220012A912 /* Models */,
 				3A4AAB092A91CC260012A912 /* Views */,
 				3A4AAB0A2A91CC2A0012A912 /* Controllers */,
+				3A4AAB192A91E5590012A912 /* Delegates */,
 				3A4AAAD82A91CA680012A912 /* AppDelegate.swift */,
 				3A4AAADA2A91CA680012A912 /* SceneDelegate.swift */,
 				3A4AAADE2A91CA680012A912 /* Main.storyboard */,
@@ -164,6 +167,14 @@
 				3A4AAB132A91DB6B0012A912 /* MemoListViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A4AAB192A91E5590012A912 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3A4AAB1A2A91E59F0012A912 /* MemoFormViewControllerDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				3A4AAAD92A91CA680012A912 /* AppDelegate.swift in Sources */,
 				3A4AAB102A91D4A50012A912 /* StyledButton.swift in Sources */,
 				3A4AAB142A91DB6B0012A912 /* MemoListViewController.swift in Sources */,
+				3A4AAB1B2A91E59F0012A912 /* MemoFormViewControllerDelegate.swift in Sources */,
 				3A4AAB172A91DDE20012A912 /* TitleContentTableViewCell.swift in Sources */,
 				3A4AAB0E2A91CD030012A912 /* MemoModel.swift in Sources */,
 				3A4AAADB2A91CA680012A912 /* SceneDelegate.swift in Sources */,

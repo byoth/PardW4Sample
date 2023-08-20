@@ -6,6 +6,11 @@ class MemoListViewController: UIViewController {
     @IBOutlet weak var addButton: StyledButton!
     @IBOutlet weak var memoTableView: UITableView!
     
+    @IBAction func tapAddButton(_ sender: Any) {
+        let controller = buildMemoFormController()
+        present(controller, animated: true)
+    }
+    
     var memos: [MemoModel] = [] {
         didSet {
             memoTableView.reloadData()
@@ -25,6 +30,13 @@ class MemoListViewController: UIViewController {
             UINib(nibName: "TitleContentTableViewCell", bundle: .main),
             forCellReuseIdentifier: "Memo"
         )
+    }
+    
+    fileprivate func buildMemoFormController(memo: MemoModel? = nil) -> MemoFormViewController {
+        let controller = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MemoForm") as! MemoFormViewController
+        controller.memo = memo
+        controller.delegate = self
+        return controller
     }
 }
 
@@ -50,10 +62,10 @@ extension MemoListViewController: UITableViewDataSource, UITableViewDelegate {
         let controller = buildMemoFormController(memo: memo)
         present(controller, animated: true)
     }
-    
-    private func buildMemoFormController(memo: MemoModel) -> MemoFormViewController {
-        let controller = UIStoryboard(name: "Main", bundle: .main).instantiateViewController(withIdentifier: "MemoForm") as! MemoFormViewController
-        controller.memo = memo
-        return controller
+}
+
+extension MemoListViewController: MemoFormViewControllerDelegate {
+    func memoFormDidSubmit(_ memo: MemoModel) {
+        memos.append(memo)
     }
 }
